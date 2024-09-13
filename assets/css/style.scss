@@ -1,0 +1,181 @@
+$bnt_color:#FF7400;
+$fonts_tinos:Tinos;
+$fonts_opensans:Opensans;
+$color_text:#656363;
+$color_title:#D67E34;
+@font-face {
+    font-family: Tinos;
+    src: url(../fonts/Tinos-Regular.ttf);
+    font-weight: 400;
+}
+@font-face {
+    font-family: Opensans;
+    src: url(../fonts/OpenSans_SemiCondensed-Bold.ttf);
+    font-weight: 700;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style: none;
+}
+
+.container{
+    max-width: 1110px;
+    margin: 0 auto;
+    @media (max-width: 1025px) {
+        max-width: unset;
+        padding: 0 10px;
+    }
+    @media (max-width: 500px) {
+        padding: 0 14px;
+    }
+}
+.btn{
+    background-color: $bnt_color;
+    font-size: 14px;
+    font-family: $fonts_opensans;
+    color:#fff;
+    font-weight: 700;
+    padding: 14px 18px;
+}
+.main{
+    background: url('../img/backfon.png') no-repeat center center / cover;
+
+    &__block{
+        max-width: 480px;
+    }
+    &__subtitle{
+        color:$color_title;
+        font-family: $fonts_tinos;
+        font-family: 400;
+        font-size: 50px;
+    }
+    &__title{
+        color:$color_title;
+    }
+    &__text{
+        color:$color_title;
+    }
+}
+
+.header{
+    padding: 50px 0;
+    &__wrap{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__logo{
+        width: 100px;
+        & img{
+            width: 100%;
+        }
+        @media (max-width: 863px){
+            width: 75px;
+        }
+        @media (max-width: 749px) {
+            width: 55px;
+        }
+        @media (max-width: 500px) {
+            width: 45px;
+        }
+    }
+    &__burger{
+        display:none;
+        @media (max-width: 749px){
+            display: block;
+
+        }
+    }
+    &__block{
+        display: flex;
+        align-items: center;
+
+        @media (max-width: 749px) {
+            display: none;
+            
+        }
+    }
+    &__menu{
+        display: flex;
+        gap: 23px;
+        margin-right: 36px;
+        @media (max-width: 863px) {
+            margin-right: 25px;
+        }
+    }
+    &__link{
+        font-family: $fonts_opensans;
+        font-weight: 700;
+        color:#fff;
+        font-size: 14px;
+
+        &:hover{
+            color: $color_text;
+        }
+        @media (max-width: 863px) {
+            font-size: 12px;
+            font-weight: 400;
+        }
+    }
+    &__box{
+        display: flex;
+        align-items: center;
+        margin-right: 45px;
+        @media (max-width: 863px){
+            margin-right: 30px;
+        }
+    }
+
+    &__cart{
+        border-right: 1px solid #fff;
+        padding: 17px 21px 17px 0px;
+        margin-right: 34px;
+        @media (max-width: 863px){
+            margin-right: 20px;
+        }
+    }
+    &__phone{
+        &-link{
+            font-family: $fonts_opensans;
+            font-weight: 700;
+            color:#fff;
+            font-size: 18px;
+            display: flex;
+            gap:8px;
+            
+            &::before{
+                content: '';
+                background: url('../svg/phone-1.svg');
+                display: block;
+                width: 23px;
+                height: 23px;
+                color:#fff;
+            }
+            @media (max-width: 863px) {
+                font-size: 14px;
+                font-weight: 400;
+            }
+        }
+        &-text{
+            font-family: $fonts_opensans;
+        font-weight: 400;
+        color:#fff;
+        font-size: 14px;
+        max-width: 155px;
+        }
+    }
+    &__btn{
+        @media (max-width: 863px){
+            text-align: center;
+        }
+    }
+}
