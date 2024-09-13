@@ -48,10 +48,31 @@ li {
 }
 
 .main {
+  height: 100vh;
   background: url("../img/backfon.png") no-repeat center center/cover;
+}
+@media (max-width: 500px) {
+  .main {
+    background: url("../img/backfon.png") no-repeat;
+  }
 }
 .main__block {
   max-width: 480px;
+  margin-top: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (max-width: 863px) {
+  .main__block {
+    width: 50px;
+  }
+}
+@media (max-width: 500px) {
+  .main__block {
+    width: 500px;
+    margin-top: 250px;
+  }
 }
 .main__subtitle {
   color: #D67E34;
@@ -59,11 +80,46 @@ li {
   font-family: 400;
   font-size: 50px;
 }
+@media (max-width: 863px) {
+  .main__subtitle {
+    font-size: 30px;
+  }
+}
 .main__title {
   color: #D67E34;
+  font-family: Tinos;
+  font-weight: 485;
+  font-size: 90px;
+  margin-bottom: 12px;
+}
+@media (max-width: 863px) {
+  .main__title {
+    font-size: 30px;
+  }
 }
 .main__text {
-  color: #D67E34;
+  color: #fff;
+  font-family: Opensans;
+  font-family: 400;
+  font-size: 18px;
+  margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.main__text::before {
+  content: "";
+  display: block;
+  width: 61px;
+  height: 2px;
+  background-color: #fff;
+}
+.main__text::after {
+  content: "";
+  display: block;
+  width: 61px;
+  height: 2px;
+  background-color: #fff;
 }
 
 .header {
@@ -172,6 +228,7 @@ li {
   width: 23px;
   height: 23px;
   color: #fff;
+  margin-bottom: -2500px;
 }
 @media (max-width: 863px) {
   .header__phone-link {
@@ -190,4 +247,54 @@ li {
   .header__btn {
     text-align: center;
   }
+}
+
+.history {
+  padding-top: 200px;
+}
+.history__card {
+  width: 349px;
+  height: 328px;
+  box-shadow: 10px 10px 40px 1px rgba(0, 0, 0, 0.1);
+  padding: 48px 25px 20px 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 26px;
+  justify-content: center;
+  text-align: center;
+}
+.history__card-title {
+  color: #2C2C2C;
+  font-size: 26px;
+  text-align: center;
+  margin-top: 5px;
+  margin-bottom: 20px;
+}
+.history__card-title span {
+  color: #BC9060;
+}
+.history__card-text {
+  color: #656363;
+}
+.history__card-wrap {
+  margin-top: 80px;
+}
+.history__bottommenu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.history__miniblock {
+  display: flex;
+  justify-items: center;
+}
+
+.myhistory__title {
+  text-align: center;
+  font-size: 54px;
+  font-family: Tinos;
+}
+.myhistory__title span {
+  color: #D67E34;
 }

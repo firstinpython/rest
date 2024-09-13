@@ -36,6 +36,7 @@ li{
     }
     @media (max-width: 500px) {
         padding: 0 14px;
+        
     }
 }
 .btn{
@@ -47,22 +48,73 @@ li{
     padding: 14px 18px;
 }
 .main{
+    height: 100vh;
     background: url('../img/backfon.png') no-repeat center center / cover;
+
+    @media (max-width: 500px) {
+        background: url('../img/backfon.png') no-repeat;
+
+    }
 
     &__block{
         max-width: 480px;
+        margin-top: 150px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @media (max-width: 863px) {
+            width: 50px;
+        }
+        @media (max-width: 500px) {
+            width: 500px;
+            margin-top: 250px;
+        }
     }
     &__subtitle{
         color:$color_title;
         font-family: $fonts_tinos;
         font-family: 400;
         font-size: 50px;
+        @media (max-width: 863px) {
+            font-size: 30px;
+        }
+        
     }
     &__title{
         color:$color_title;
+        font-family: $fonts_tinos;
+        font-weight: 485;
+        font-size: 90px;
+        margin-bottom: 12px;
+        @media (max-width: 863px) {
+            font-size: 30px;
+        }
+
     }
     &__text{
-        color:$color_title;
+        color:#fff;
+        font-family: $fonts_opensans;
+        font-family: 400;
+        font-size: 18px;
+        margin-bottom: 40px;
+
+        display: flex;
+        align-items: center ;
+        gap:8px;
+        &::before{
+            content: '';
+            display: block;
+            width: 61px;
+            height: 2px;
+            background-color: #fff;
+        }
+        &::after{
+            content: '';
+            display: block;
+            width: 61px;
+            height: 2px;
+            background-color: #fff;
+        }
     }
 }
 
@@ -159,6 +211,7 @@ li{
                 width: 23px;
                 height: 23px;
                 color:#fff;
+                margin-bottom: -2500px;
             }
             @media (max-width: 863px) {
                 font-size: 14px;
@@ -176,6 +229,64 @@ li{
     &__btn{
         @media (max-width: 863px){
             text-align: center;
+        }
+    }
+}
+
+.history{
+    padding-top: 200px;
+
+    &__card{
+        width: 349px;
+        height: 328px;
+        box-shadow: 10px 10px 40px 1px rgba(0,0,0, .1);
+        padding: 48px 25px 20px 25px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 26px;
+        justify-content: center;
+        text-align: center;
+    }
+
+
+    &__card-title{
+        color:#2C2C2C;
+        font-size: 26px;
+        text-align: center;
+        span{
+            color:#BC9060;
+        }
+        margin-top: 5px;
+        margin-bottom: 20px;
+    }
+    &__card-text{
+        color:$color_text;
+
+        
+    }
+    &__card-wrap{
+        margin-top: 80px;
+    }
+    &__bottommenu{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__miniblock{
+        display: flex;
+        justify-items: center;
+    }
+
+    
+}
+.myhistory{
+    &__title{
+        text-align: center;
+        font-size: 54px;
+        font-family: $fonts_tinos;
+        span{
+            color: #D67E34;
         }
     }
 }
